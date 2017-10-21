@@ -1,0 +1,49 @@
+package com.company;
+import java.util.Scanner ;
+
+
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Введите длину массива: ");
+        int size = scanner.nextInt( );
+        int array[] = new int[size];
+        int i;
+        for ( i = 0; i < size ; i++) {
+            System.out.println("Вводим массив: " +array[i]);
+            array[i] = scanner.nextInt();
+        }
+        int j;
+        int n;
+        int max = array[0];
+        for( j = 1; j < size; j++){
+            if(max < array[j]){
+                max = array[j];
+            }
+        }
+        max = array[j];
+        System.out.println("max= " +max);
+        int min = array[0];
+        for(  n=0;n < size; n++){
+            if(min > array[n]) {
+                min = array[n];
+                
+            }
+
+            }
+            min= array[n];
+        System.out.println("min = " +min);
+        int swap;
+        swap = array[j];
+        array[j]=array[n];
+        array[n]= swap;
+        System.out.println("Массив после обмена: ");
+        for(i=0; i < size; i++){
+        System.out.println(+array[i]);
+
+        }
+    }
+}
+
